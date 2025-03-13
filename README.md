@@ -19,10 +19,8 @@ Before setting up, ensure you have the following installed:
 5. Upload the code to your microcontroller.
 
 #### 2. Install & Run the Web Server
-1. Open a terminal and navigate to the `server` directory:
-   ```sh
-   cd server
-   ```
+1. Open a terminal inside the `server` directory:
+   
 2. Install Node.js dependencies:
    ```sh
    npm install
@@ -31,6 +29,8 @@ Before setting up, ensure you have the following installed:
    ```sh
    start.bat
    ```
+   or double-click the start.bat file
+   
    - This will launch the server and open `http://127.0.0.1:8080/index.html` in your browser.
    - If the batch file doesn’t work, manually start the server:
      ```sh
