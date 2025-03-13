@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced IMU 3D Visualization</title>
+    <link rel="stylesheet" href="css/styles.css">   // styles
+</head>
+
+<body>
+    <div id="info">IMU 3D Visualization</div>
+    <div id="stats">
+        Roll: <span id="rollStat">0.0°</span><br>
+        Pitch: <span id="pitchStat">0.0°</span><br>
+        Yaw: <span id="yawStat">0.0°</span><br>
+    </div>
+    <div id="controls">
+        <button id="connectBtn">Connect to Serial Port</button>
+        <button id="calibrateBtn" disabled>Quick Calibrate</button>
+        <div class="switch">
+            <input type="checkbox" id="modelCheckbox" >
+            <label for="modelCheckbox">Load Model</label>
+        </div>
+        <div class="switch">
+            <input type="checkbox" id="gridCheckbox" checked>
+            <label for="gridCheckbox">Show grid</label>
+        </div>
+	<div class="switch">
+            <input type="checkbox" id="smoothingCheckbox" checked>
+            <label for="smoothingCheckbox">Enable smoothing</label>
+        </div>
+    </div>
+    <div id="axisLegend">
+        <div><span class="axisColor red"></span>X-axis (Roll)</div>
+        <div><span class="axisColor green"></span>Y-axis (Pitch)</div>
+        <div><span class="axisColor blue"></span>Z-axis (Yaw)</div>
+    </div>
+	
+	// Scripts
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/DRACOLoader.js"></script>
+   	<script src="js/main.js"></script>
+</body>
+</html>
