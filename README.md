@@ -25,17 +25,16 @@ Before setting up, ensure you have the following installed:
    ```sh
    npm install
    ```
-3. Run the local server:
-   ```sh
-   start.bat
-   ```
-   or double-click the start.bat file
+3. Run the local server by double-click the `start.bat` file in the root directory
    
    - This will launch the server and open `http://127.0.0.1:8080/index.html` in your browser.
-   - If the batch file doesn’t work, manually start the server:
+   - If the batch file doesn’t work, manually start the server. enter the followind command in the terminal inside the `server` directory:
+     
      ```sh
      node server.js
      ```
+     then copy `http://127.0.0.1:8080/index.html` to your browser
+
 
 ## File Structure
 - **`arduino/`** → Contains the Arduino IMU sensor code.
@@ -45,27 +44,10 @@ Before setting up, ensure you have the following installed:
   - **`package.json`** → Lists dependencies.
   - **`start.bat`** → Starts the server and opens the web app.
 
-## Uploading to GitHub
-### Exclude `node_modules/`
-The `node_modules/` folder is large and should not be uploaded. Ensure it is ignored by adding the following line to `.gitignore`:
-```
-node_modules/
-```
-If you accidentally uploaded it, remove it from the repository:
-```sh
-git rm -r --cached node_modules
-``` 
-Then commit and push:
-```sh
-git commit -m "Removed node_modules"
-git push
-```
 
 ## Troubleshooting
 - **Missing Packages?** Run `npm install` in the `server/` folder.
 - **Port Already in Use?** Change the port in `server.js` if 8080 is taken.
 - **Arduino Not Sending Data?** Check serial connections and baud rate.
 
-## License
-This project is open-source under the MIT License.
 
