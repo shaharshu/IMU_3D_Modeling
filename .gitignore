@@ -13,3 +13,5 @@ build/
 
 # Ignore temporary files
 *.swp
+
+desktop.ini
